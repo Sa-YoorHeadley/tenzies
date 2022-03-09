@@ -31,6 +31,7 @@ body {
 }
 
 .main {
+  position: relative;
   width: 500px;
   height: 500px;
   background-color: var(--secondary-color);
@@ -48,7 +49,31 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  margin: 0;
+  font-family: 'Inter';
+}
+
+.roll-count {
+  position: absolute;
+  top: .5rem;
+  right: 2.5rem;
+}
+
+.time-count {
+  position: absolute;
+  top: 1.75rem;
+  right: 2.5rem;
+}
+
+.instructions {
+  margin: 0;
+  padding-inline: 2.5rem;
+  font-family: 'Inter';
 }
 
 .dies {
