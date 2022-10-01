@@ -7,7 +7,6 @@ function App() {
   const [dice, setDice] = useState(allNewDice)
   const [tenzies, setTenzies] = useState(false)
   const [rolls, setRolls] = useState(0)
-  const [time, setTime] = useState(0)
   
   useEffect(() => {
     const allHeld = dice.every( die => die.isHeld )
@@ -16,16 +15,7 @@ function App() {
       setTenzies(true)
     }
   }, [dice])
-  
-  useEffect(() => {
-    if(rolls === 1){
-      console.log('game start')
-    }
-    if(tenzies){
-      console.log('game end')
-    } 
-  }, [rolls])
-  
+    
   function getNewDie(){
     return {
       'id': nanoid(),
@@ -61,17 +51,12 @@ function App() {
       {tenzies && <Confetti/>}
       <main className="main">
         <div className='roll-count'>Rolls: {rolls}</div>
-        <div className='time-count'>Time: {time}</div>
-
-        {/* Fix */}
-        <div className='best-roll'>Best Rolls: {rolls}</div>
-        <div className='best-time'>Best Time: {time}</div>
         <h1 className="title">Tenzies</h1>
         <p className="instructions">Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
         <section className="dies">
           {dieElements}
         </section>
-        {!tenzies ? <button className="btn" onClick={rollDice}>Roll</button> : <button className="btn" onClick={() =>{setDice(allNewDice); setRolls(true); setTenzies(false)}}>New Game</button>}
+        {!tenzies ? <button className="btn" onClick={rollDice}>Roll</button> : <button className="btn" onClick={() =>{setDice(allNewDice); setRolls(0); setTenzies(false)}}>New Game</button>}
       </main>
     </div>
   );

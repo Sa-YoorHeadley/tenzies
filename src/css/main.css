@@ -7,8 +7,7 @@
 }
 
 *, *::before, *::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Karla", sans-serif;
 }
 
@@ -18,16 +17,10 @@ body {
 }
 
 .App {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .main {
@@ -36,31 +29,22 @@ body {
   height: 500px;
   background-color: var(--secondary-color);
   border-radius: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
 .title {
   font-size: 3rem;
   margin: 0;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .roll-count {
   position: absolute;
-  top: .5rem;
+  top: 1.75rem;
   right: 2.5rem;
 }
 
@@ -73,53 +57,36 @@ body {
 .instructions {
   margin: 0;
   padding-inline: 2.5rem;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .dies {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (60px)[5];
-      grid-template-columns: repeat(5, 60px);
+  grid-template-columns: repeat(5, 60px);
   row-gap: 1.75rem;
-  -webkit-column-gap: 1.75rem;
-          column-gap: 1.75rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
+  justify-content: center;
+  align-content: center;
 }
 
 .die {
   cursor: pointer;
   width: 60px;
   height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   font-size: 2.25rem;
   font-weight: 700;
-  -webkit-box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
-  border-radius: .75rem;
+  box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
   color: var(--text-color);
-  -webkit-transition: -webkit-transform 100ms ease-in-out;
-  transition: -webkit-transform 100ms ease-in-out;
   transition: transform 100ms ease-in-out;
-  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
 }
-
 .die:hover {
-  -webkit-transform: scale(1.09);
-          transform: scale(1.09);
+  transform: scale(1.09);
 }
 
 .btn {
@@ -127,22 +94,18 @@ body {
   border: none;
   outline: none;
   background-color: var(--btn-primary-color);
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
-  border-radius: .25rem;
-  padding: .35em 1.65em;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 0.25rem;
+  padding: 0.35em 1.65em;
   font-size: 1.75rem;
   color: var(--secondary-color);
-  opacity: .8;
-  -webkit-transition: opacity 100ms ease-in-out;
+  opacity: 0.8;
   transition: opacity 100ms ease-in-out;
 }
-
 .btn:hover {
   opacity: 1;
 }
 
 .held {
   background-color: var(--btn-held-color);
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
