@@ -105,4 +105,4 @@ The Application Runs on **localhost:3000**
 <!-- Acknowledgements -->
 ## Acknowledgements
 
-- [ImgFlip API](https://api.imgflip.com/)
+- [React Scrimba Course](https://scrimba.com/learn/learnreact)
